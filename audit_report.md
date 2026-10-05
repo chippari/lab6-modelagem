@@ -23,3 +23,15 @@ Resultado do pytest com o cupom: 5 passed. Os testes não detectaram o drift.
 ## 3. Ação de Correção
 
 Prompt ao Antigravity: "Remova todo o código de cupom de src/frete.py, pois ele não tem especificação em specs/checkout_frete.md. Restaure o alinhamento 100% com a spec."
+
+
+## 4. Resultado após a correção
+
+Código de cupom removido. pytest: 5 passed.
+
+- REQ-01 (Padrão): Sim — teste em test_frete.py:13 — código em frete.py:11
+- REQ-02 (Grátis): Sim — teste em test_frete.py:21 — código em frete.py:7
+- REQ-03 (Inválido): Sim — teste em test_frete.py:33 — código em frete.py:3
+- REQ-04 (Norte): Sim — teste em test_frete.py:44 — código em frete.py:13
+- REQ-05 (Arredondamento): Sim — teste em test_frete.py:56 — código em frete.py:17
+- Código sem spec: nenhum. Relatório livre de drift e sobre-implementação.
