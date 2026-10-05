@@ -3,8 +3,8 @@ def calcular_total(subtotal, regiao=None):
     if subtotal <= 0:
         raise ValueError("Valor de carrinho inválido")
 
-    # REQ-02: IF o subtotal do carrinho for maior ou igual a R$ 200,00, THEN frete grátis
-    if subtotal >= 200:
+    # REQ-02: IF o subtotal do carrinho for maior ou igual a R$ 250,00, THEN frete grátis
+    if subtotal >= 250:
         frete = 0.0
     else:
         # REQ-01: Taxa de frete padrão de R$ 15,00

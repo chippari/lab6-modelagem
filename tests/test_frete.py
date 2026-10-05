@@ -17,16 +17,16 @@ def test_req01_adiciona_frete_padrao_ao_subtotal():
     assert calcular_total(50.0) == 65.00
 
 
-# REQ-02 (IF/THEN): IF o subtotal do carrinho for maior ou igual a R$ 200,00, THEN THE SYSTEM SHALL conceder frete grátis (taxa = R$ 0,00).
-def test_req02_frete_gratis_para_subtotal_maior_ou_igual_200():
-    # Limite exato: R$ 200,00 deve ter frete grátis
-    assert calcular_total(200.0) == 200.00
-    # Valor acima do limite: R$ 250,00 deve ter frete grátis
+# REQ-02 (IF/THEN): IF o subtotal do carrinho for maior ou igual a R$ 250,00, THEN THE SYSTEM SHALL conceder frete grátis (taxa = R$ 0,00).
+def test_req02_frete_gratis_para_subtotal_maior_ou_igual_250():
+    # Limite exato: R$ 250,00 deve ter frete grátis
     assert calcular_total(250.0) == 250.00
-    # Logo abaixo do limite: R$ 199.99 deve cobrar taxa de frete padrão
-    assert calcular_total(199.99) == 214.99
-    # Frete grátis mesmo para região Norte quando subtotal >= 200,00
-    assert calcular_total(200.0, regiao="Norte") == 200.00
+    # Valor acima do limite: R$ 300,00 deve ter frete grátis
+    assert calcular_total(300.0) == 300.00
+    # Logo abaixo do limite: R$ 249.99 deve cobrar taxa de frete padrão
+    assert calcular_total(249.99) == 264.99
+    # Frete grátis mesmo para região Norte quando subtotal >= 250,00
+    assert calcular_total(250.0, regiao="Norte") == 250.00
 
 
 # REQ-03 (IF/THEN): IF o subtotal do carrinho for menor ou igual a R$ 0,00, THEN THE SYSTEM SHALL exibir o erro 'Valor de carrinho inválido'.
