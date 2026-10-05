@@ -1,18 +1,10 @@
-# TASK-01 — Frete padrão e frete grátis por valor
+# TASK-01 — Cálculo de frete
 
-## Contexto fornecido ao agente (isolamento estrito)
-Apenas: `constitution.md`, `specs/checkout_frete.md` e `tasks/TASK-01.md`.
+## Isolamento Estrito
+O agente recebe APENAS esta task, a spec e a constituição. Nunca o projeto inteiro.
 
-## Escopo (tamanho mínimo)
-- Cobrir somente REQ-01 (frete padrão R$ 15,00) e REQ-02 (frete grátis a partir de R$ 200,00).
-- Sem cupons, sem regiões, sem logs, sem persistência.
-
-## Entregáveis
-- `tests/test_frete.py` — suíte pytest escrita ANTES do código (Red).
-- `src/frete.py` — implementação mínima para os testes passarem (Green).
+## Tamanho Mínimo
+Implementar somente REQ-01 a REQ-05 de specs/checkout_frete.md, sem nada além disso.
 
 ## Rastreabilidade
-Cada teste e cada trecho de código deve citar REQ-01 ou REQ-02 em comentário.
-
-## Critério de pronto
-`pytest` com 100% de aprovação.
+O código e os testes devem citar o REQ correspondente em comentário.
