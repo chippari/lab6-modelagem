@@ -13,36 +13,36 @@
 - **Passos:** chamar `calcular_total(100.00, "Sudeste")`
 - **Dados:** subtotal R$ 100,00; região Sudeste
 - **Resultado esperado:** R$ 115,00
-- **Resultado obtido:** —
-- **Status:** —
+- **Resultado obtido:** R$ 115,00
+- **Status:** Sucesso
 ### CT-02 — Frete grátis no limite (REQ-02)
 - **Cenário:** subtotal exatamente no limite e um centavo abaixo
 - **Passos:** chamar `calcular_total(250.00)` e `calcular_total(249.99)`
 - **Dados:** subtotais R$ 250,00 e R$ 249,99
 - **Resultado esperado:** R$ 250,00 (grátis) e R$ 264,99 (paga frete)
-- **Resultado obtido:** —
-- **Status:** —
+- **Resultado obtido:** R$ 250,00 e R$ 264,99
+- **Status:** Sucesso
 ### CT-03 — Carrinho com valor inválido (REQ-03)
 - **Cenário:** subtotal zero
 - **Passos:** chamar `calcular_total(0.00)`
 - **Dados:** subtotal R$ 0,00
 - **Resultado esperado:** erro `ValueError("Valor de carrinho inválido")`
-- **Resultado obtido:** —
-- **Status:** —
+- **Resultado obtido:** erro ValueError("Valor de carrinho inválido")
+- **Status:** Sucesso
 ### CT-04 — Adicional da região Norte (REQ-04)
 - **Cenário:** cliente do Norte com subtotal abaixo do limite
 - **Passos:** chamar `calcular_total(100.00, "Norte")`
 - **Dados:** subtotal R$ 100,00; região Norte
 - **Resultado esperado:** R$ 125,00 (R$ 15,00 + R$ 10,00 de frete)
-- **Resultado obtido:** —
-- **Status:** —
+- **Resultado obtido:** R$ 125,00
+- **Status:** Sucesso
 ### CT-05 — Arredondamento em 2 casas (REQ-05)
 - **Cenário:** subtotal com mais de 2 casas decimais
 - **Passos:** chamar `calcular_total(10.126)`
 - **Dados:** subtotal R$ 10,126
 - **Resultado esperado:** R$ 25,13
-- **Resultado obtido:** —
-- **Status:** —
+- **Resultado obtido:** R$ 25,13
+- **Status:** Sucesso
  
 ## Testes de Integração (`carrinho` + `frete` conectados)
  
