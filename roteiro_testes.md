@@ -76,12 +76,12 @@
 - **Passos:** montar o pedido e chamar `fechar_pedido` com os itens e a região
 - **Dados:** camiseta R$ 79,90 e boné R$ 49,90; região Sudeste
 - **Resultado esperado:** R$ 144,80 (subtotal R$ 129,80 + frete R$ 15,00)
-- **Resultado obtido:** —
-- **Status:** —
+- **Resultado obtido:** R$ 144,80
+- **Status:** Sucesso
 ### CT-10 — Compra grande no Norte ganha frete grátis
 - **Cenário:** cliente do Norte compra 3 livros e passa do limite
 - **Passos:** montar o pedido e chamar `fechar_pedido` com os itens e a região
 - **Dados:** 3 livros de R$ 89,90; região Norte
 - **Resultado esperado:** R$ 269,70 (frete grátis, sem adicional do Norte, pois REQ-02 prevalece)
-- **Resultado obtido:** —
-- **Status:** —
+- **Resultado obtido:** R$ 269,70
+- **Status:** Sucesso
