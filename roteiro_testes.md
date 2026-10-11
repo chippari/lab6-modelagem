@@ -52,22 +52,22 @@
 - **Passos:** chamar `fechar_pedido([(50.00, 2)], "Norte")`
 - **Dados:** 2 itens de R$ 50,00; região Norte
 - **Resultado esperado:** R$ 125,00 (subtotal R$ 100,00 + frete R$ 25,00)
-- **Resultado obtido:** —
-- **Status:** —
+- **Resultado obtido:** R$ 125,00
+- **Status:** Sucesso
 ### CT-07 — Soma de itens diferentes atinge o frete grátis
 - **Cenário:** vários itens cuja soma chega exatamente ao limite
 - **Passos:** chamar `fechar_pedido([(100.00, 1), (75.00, 2)])`
 - **Dados:** 1 item de R$ 100,00 e 2 itens de R$ 75,00
 - **Resultado esperado:** R$ 250,00 (subtotal R$ 250,00, frete grátis)
-- **Resultado obtido:** —
-- **Status:** —
+- **Resultado obtido:** R$ 250,00
+- **Status:** Sucesso
 ### CT-08 — Carrinho vazio propaga o erro do frete
 - **Cenário:** o carrinho não tem itens, então o subtotal é zero
 - **Passos:** chamar `fechar_pedido([])`
 - **Dados:** lista de itens vazia
 - **Resultado esperado:** erro `ValueError("Valor de carrinho inválido")` vindo do `frete`
-- **Resultado obtido:** —
-- **Status:** —
+- **Resultado obtido:** erro ValueError(“Valor de carrinho inválido”)
+- **Status:** Sucesso
  
 ## Testes Funcionais (cenário do cliente, conforme a spec)
  
